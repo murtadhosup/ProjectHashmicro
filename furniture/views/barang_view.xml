@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <!-- furniture.barang tree view -->
+    <record id="furniture_barang_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Barang</field>
+        <field name="model">furniture.barang</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name" />
+                <field name="harga_beli" />
+                <field name="harga_jual" />
+                <field name ="stok"/>
+                <field name="kategorifurniture_id" />
+                <field name="supplier_id" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- furniture.barang form view -->
+    <record id="furniture_barang_view_form" model="ir.ui.view">
+        <field name="name">Form Barang</field>
+        <field name="model">furniture.barang</field>
+        <field name="arch" type="xml">
+            <form string="Barang">
+                <header>
+                <button name="%(furniture.barang_datang_action_wizzard)d" type="action" string="Input Barang" class="btn btn-warning"/>
+                </header>
+                <sheet>
+                    <group name="barang" string="Barang">
+                        <!-- Add your fields here -->
+                        <field name="name" />
+                        <field name="harga_beli" />
+                        <field name="harga_jual" />
+                        <field name ="stok"/>
+                    </group>
+
+                    <group name="Kategori furniture" string="Kategori furniture">
+                        <field name="kategorifurniture_id" />
+                    </group>
+                    <group name="supplier" string="Supplier" >
+                        <field name="supplier_id">
+                            <tree>
+                                <field name="name" />
+                                <field name="alamat" />
+                                <field name="barang_id" widget="many2many_tags"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- furniture.barang action window -->
+    <record id="furniture_barang_action" model="ir.actions.act_window">
+        <field name="name">Daftar Barang</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">furniture.barang</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem
+        id="furniture_barang_menu_act"
+        name="Daftar Barang"
+        parent="furniture_barang_menu_categ"
+        action="furniture_barang_action"
+        sequence="20"/>
+
+</odoo>
