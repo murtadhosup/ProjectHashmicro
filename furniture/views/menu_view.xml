@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <menuitem
+        id="furniture_menu_root"
+        name="Rafli Furniture "
+        sequence="12"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem
+        id="furniture_barang_menu_categ"
+        name="Barang"
+        parent="furniture_menu_root"
+        sequence="12"/>
+
+        <menuitem
+        id="furniture_pegawai_menu_categ"
+        name="Pegawai"
+        parent="furniture_menu_root"
+        sequence="20"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem
+	  id="furniture_transaksi_menu_categ"
+	  name="Transaksi"
+	  parent="furniture_menu_root"
+	  sequence="42"/>
+</odoo>

@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_furniture_kategorifurniture,access.furniture.kategorifurniture,model_furniture_kategorifurniture,,1,1,1,1
+access_furniture_barang,access.furniture.barang,model_furniture_barang,,1,1,1,1
+access_furniture_person,access.furniture.person,model_furniture_person,,1,1,1,1
+access_furniture_kasir,access.furniture.kasir,model_furniture_kasir,,1,1,1,1
+access_furniture_cleaningservice,access.furniture.cleaningservice,model_furniture_cleaningservice,,1,1,1,1
+access_furniture_supplier,access.furniture.supplier,model_furniture_supplier,,1,1,1,1
+access_furniture_penjualan,access.furniture.penjualan,model_furniture_penjualan,,1,1,1,1
+access_furniture_detailpenjualan,access.furniture.detailpenjualan,model_furniture_detailpenjualan,,1,1,1,1
+access_furniture_barangdatang,access.furniture.barangdatang,model_furniture_barangdatang,,1,1,1,1
