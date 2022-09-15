@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+ <!-- furniture.kategorifurniture tree view -->
+    <record id="furniture_kategorifurniture_view_tree" model="ir.ui.view">
+        <field name="name">furniture.kategorifurniture.view.tree</field>
+        <field name="model">furniture.kategorifurniture</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="kode_kelompok"/>
+                <field name="kode_rak"/>
+                <field name="jml_item" />
+                <field name="daftar" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- furniture.kategorifurniture form view -->
+    <record id="furniture_kategorifurniture" model="ir.ui.view">
+        <field name="name">furniture.kategorifurniture.view.form</field>
+        <field name="model">furniture.kategorifurniture</field>
+        <field name="arch" type="xml">
+            <form string="Kelompok Barang">
+                <sheet>
+                    <group name="Kelompok" string="Posisi Kelompok">
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="kode_kelompok"/>
+                    </group>
+
+                    <group name="Rak" string="Posisi Barang">
+                        <field name="kode_rak"/>
+                        <field name="barang_ids" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- furniture.kategorifurniture action window -->
+    <record id="furniture_kategorifurniture_action" model="ir.actions.act_window">
+        <field name="name">Kelompok Barang</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">furniture.kategorifurniture</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="furniture_kategorifurniture_menu_act"
+        name="Kelompok Barang Furniture"
+        parent="furniture_barang_menu_categ"
+        action="furniture_kategorifurniture_action"
+        sequence="10"/>
+
+</odoo>
